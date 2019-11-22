@@ -1,10 +1,11 @@
 
 function add(prev, next) { return prev + next }
 function isNotInRange(array, i) { return i <= 0 || i >= array.length }
-function arrayTooShort(array) { return array.length <= 1 }
+function arrayTooShort(array) { return array.length === 1 }
 
 function isBalanced(index) {
     return array => {
+        if(array.length === 0) { return true }
         if (isNotInRange(array, index) || arrayTooShort(array)) {
             return false;
         }
